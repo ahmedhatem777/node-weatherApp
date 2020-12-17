@@ -18,8 +18,10 @@ getWeather = (lat, long, callback) => {
             const temp = body.current.temperature;
             const precip = body.current.precip;
             const forecast = body.current.weather_descriptions[0];
+            const humidity = body.current.humidity
             callback(undefined, 'Weather is ' + forecast + '. It is currently ' + temp  + 
-                                ' degrees, there is ' + precip  + ' precipitation');     
+                                ' degrees, there is ' + precip  + ' precipitation and the humidity is ' + 
+                                humidity + '%.');     
         }
     })
 }
