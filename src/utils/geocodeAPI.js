@@ -1,7 +1,7 @@
 const request = require('postman-request');
+require('dotenv').config();
 
-const mapboxUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/Heliopolis.json?access_token=pk.eyJ1IjoiYWhtZWRoYXRlbTc3NyIsImEiOiJja2lpNDk0N2IwMHlsMnpteDV0NnZvZTEzIn0.uXadE-WbgxVzerWDTRaR8g";
-
+const mapboxUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/Heliopolis.json?access_token=${process.env.MAPBOXKEY}`;
 
 const geocode = (addressName, callback) => {
     let url = mapboxUrl.replace('Heliopolis', encodeURIComponent(addressName));

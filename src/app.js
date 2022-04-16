@@ -31,12 +31,14 @@ app.get('/about', (req, res) => {
     });
 })
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: "Help!",
-        name: 'Ahmed Hatem'
-    });
-})
+// No need for that
+
+// app.get('/help', (req, res) => {
+//     res.render('help', {
+//         title: "Help!",
+//         name: 'Ahmed Hatem'
+//     });
+// })
 
 app.get('/weather', (req, res) => {
 

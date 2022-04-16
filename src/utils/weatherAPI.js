@@ -1,8 +1,7 @@
 const request = require('postman-request');
+require('dotenv').config();
 
-const weatherstackUrl = "http://api.weatherstack.com/current?access_key=bcb6f640f2ade005c5bc1a4f20fd7e36&query=";
-
-
+const weatherstackUrl = `http://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACKKEY}`;
 
 getWeather = (lat, long, callback) => {
     let url = weatherstackUrl + lat + ',' + long;
