@@ -5,7 +5,7 @@ const geocode = require('./utils/geocodeAPI');
 const getWeather = require('./utils/weatherAPI');
 
 const app = express();
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
 //Paths
 const partialsPath = path.join(__dirname, '../partials');
@@ -106,6 +106,8 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(port, () => {
-    console.log('Server is up on port ' + port +'.')
-})
+// app.listen(port, () => {
+//     console.log('Server is up on port ' + port +'.')
+// })
+
+module.exports = app;

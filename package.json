@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app -e js,hbs"
+    "start": "node index.js",
+    "start-dev": "nodemon index.js -e js,hbs"
   },
   "author": "Ahmed Hatem",
   "license": "ISC",
